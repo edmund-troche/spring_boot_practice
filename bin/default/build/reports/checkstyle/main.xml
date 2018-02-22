@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="7.6.1">
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/Application.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/aspect/CommonJoinPoints.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/aspect/ControllerLoggingAspect.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/aspect/package-info.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/controller/package-info.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/controller/v1/BaseController.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/controller/v1/GreetingsController.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/controller/v1/package-info.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/model/GreetingMessage.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/model/package-info.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/package-info.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/Application.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/aspect/CommonJoinPoints.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/aspect/ControllerLoggingAspect.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/aspect/package-info.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/controller/package-info.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/controller/v1/BaseController.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/controller/v1/GreetingsController.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/controller/v1/package-info.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/model/GreetingMessage.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/model/package-info.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/main/java/org/troche/spring/application/exercise/package-info.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/test/java/org/troche/spring/application/exercise/controller/v1/GreetingsControllerTest.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/test/java/org/troche/spring/application/exercise/controller/v1/package-info.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/test/java/org/troche/spring/application/exercise/model/GreetingMessageTest.java">
+</file>
+<file name="/Users/edmund/Development/spring_boot_practice/src/test/java/org/troche/spring/application/exercise/model/package-info.java">
+</file>
+</checkstyle>

@@ -1,0 +1,42 @@
+sudo: true
+dist: trusty
+language: java
+
+jdk:
+  - oraclejdk8
+  - oraclejdk9
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+git:
+  depth: 3
+
+compiler:
+  - gcc
+
+os:
+  - linux
+
+env:
+  global:
+    - WGET_CMD="wget --tries=10 --retry-connrefused --connect-timeout=3 --read-timeout=5 --waitretry=2 --quiet"
+
+install: 
+  - npm i -g markdownlint-cli@0.3.1
+  - $WGET_CMD https://github.com/hadolint/hadolint/releases/download/v1.4.0/hadolint-Linux-x86_64
+  - mv hadolint-Linux-x86_64 hadolint
+  - chmod 500 hadolint
+
+script:
+  - git --version
+  - markdownlint -V
+  - hadolint -v
+  - markdownlint README.md
+#  - hadolint --ignore DL4000 --ignore DL3008 Dockerfile
