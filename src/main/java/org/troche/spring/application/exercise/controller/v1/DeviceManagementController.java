@@ -103,9 +103,9 @@ public class DeviceManagementController extends BaseController {
     }
  
     /**
-     * Handle device query calling GET on the "/devices/" URL path.
+     * Handle device query calling GET on the "/devices" URL path.
      *
-     * @return device representation in JSON.
+     * @return list of devices in JSON.
      */
     @GetMapping(value = "/devices") 
     public ResponseEntity<?> getDevices() {
