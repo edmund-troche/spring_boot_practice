@@ -8,7 +8,10 @@
 
     <springProperty scope="context" name="springAppName" source="spring.application.name"/>
 
+    <!--
     <property name="LOG_FILE" value="${LOG_FILE:-${LOG_PATH:-logs}/${springAppName}}"/>
+    -->
+    <property name="LOG_FILE" value="${LOG_FILE:${LOG_PATH:logs}/${springAppName}}"/>
 
     <!-- Appender to log to console in plain text format -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">

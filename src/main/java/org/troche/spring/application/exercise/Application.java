@@ -10,7 +10,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * Main Spring Boot application class.
@@ -26,10 +29,14 @@ public class Application {
      * @param args   command line arguments
      */
     public static void main(final String[] args) {
-        SpringApplication app = new SpringApplication(Application.class);
+    	//ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
+        //DeviceManagementService 	dms = context.getBean(DeviceManagementService.class);
+
+        final SpringApplication app = new SpringApplication(Application.class);
         app.setBannerMode(Banner.Mode.OFF);
         app.run(args);
     }
+
 
     /**
      * This runs on start up to retrieve all the beans that were created

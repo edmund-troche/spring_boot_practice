@@ -2,6 +2,7 @@ package org.troche.spring.application.exercise.controller.v1;
 
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -26,8 +27,16 @@ import org.troche.spring.application.exercise.service.DeviceManagementService;
  */
 @RestController
 public class DeviceManagementController extends BaseController {
+    private final DeviceManagementService deviceManagementService;
+
     @Autowired
-    DeviceManagementService deviceManagementService;
+    public DeviceManagementController(final DeviceManagementService deviceManagementService) {
+        System.out.println("DeviceManagementController(), injecting device management service "
+            + deviceManagementService);
+
+        this.deviceManagementService = Objects.requireNonNull(deviceManagementService,
+			 "deviceManagementService");
+    }
 
     /**
      * Handle device creation.
@@ -36,28 +45,28 @@ public class DeviceManagementController extends BaseController {
      *
      * @return device representation in JSON.
      */
-    @PostMapping(value = "/devices", consumes = MediaType.APPLICATION_JSON_VALUE) 
+    @PostMapping(value = "/devices", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> createDevice(@RequestBody Device device, UriComponentsBuilder builder) {
 	final boolean isAdded = deviceManagementService.add(device);
         if (!isAdded) {
             return new ResponseEntity<Void>(HttpStatus.CONFLICT);
         }
 
-	// Set HTTP Location header to the URL for the new resource instance.
+        // Set HTTP Location header to the URL for the new resource instance.
         final HttpHeaders headers = new HttpHeaders();
         headers.setLocation(builder.path(UrlPath.BASE_PATH_V1 + "/devices/{id}").buildAndExpand(device.getId()).toUri());
 
         return new ResponseEntity(device, headers, HttpStatus.CREATED);
     }
- 
+
     /**
      * Handle device deletion calling HTTP DELETE on the "/devices/{id}" URL path.
      *
      * @return device representation in JSON.
      */
-    @DeleteMapping(value = "/devices/{id}") 
+    @DeleteMapping(value = "/devices/{id}")
     public ResponseEntity<?> deleteDevice(
-	    @RequestHeader(value = "prefer", defaultValue = "return=minimal") String preferHeaderValue, 
+	    @RequestHeader(value = "prefer", defaultValue = "return=minimal") String preferHeaderValue,
 	    @PathVariable("id") Long id) {
 	/**
 	 * return the representation of the deleted deviceif the "Prefer" HTTP header
@@ -86,13 +95,13 @@ public class DeviceManagementController extends BaseController {
 
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
- 
+
     /**
      * Handle device query calling GET on the "/devices/{id}" URL path.
      *
      * @return device representation in JSON.
      */
-    @GetMapping(value = "/devices/{id}") 
+    @GetMapping(value = "/devices/{id}")
     public ResponseEntity<?> getDevice(@PathVariable("id") Long id) {
 	final Device device = deviceManagementService.getDeviceById(id);
 	if (device == null) {
@@ -101,15 +110,15 @@ public class DeviceManagementController extends BaseController {
 
         return ResponseEntity.ok().body(device);
     }
- 
+
     /**
      * Handle device query calling GET on the "/devices" URL path.
      *
      * @return list of devices in JSON.
      */
-    @GetMapping(value = "/devices") 
+    @GetMapping(value = "/devices")
     public ResponseEntity<?> getDevices() {
-	final List<Device> devices = deviceManagementService.getDevices();
+        final List<Device> devices = deviceManagementService.getDevices();
 
         return ResponseEntity.ok().body(devices);
     }
