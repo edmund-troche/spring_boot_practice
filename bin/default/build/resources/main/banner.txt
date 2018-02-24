@@ -1,5 +1,0 @@
-Application: ${application.title}
-Application version: ${application.version}
-Spring Boot version: ${spring-boot.version}
-
-

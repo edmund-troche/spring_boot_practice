@@ -38,6 +38,7 @@ public class GreeterController extends BaseController {
 
 	return ResponseEntity.ok()
 		.header("content-language", convertLocaleToContentLanguage(MESSAGE.getLocale().toString()))
+		.header("vary", "content-language")
 		.body(new GreetingMessage(getGreetingText(LOCALE), LOCALE));
     }
 

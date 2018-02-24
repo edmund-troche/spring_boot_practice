@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.troche.spring.application.exercise.model.GreetingMessageTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-02-20T03:45:35" hostname="edmundmd2015mbp" time="0.0">
-  <properties/>
-  <testcase name="testConstructorInvalidMessage" classname="org.troche.spring.application.exercise.model.GreetingMessageTest" time="0.0"/>
-  <testcase name="testConstructorInvalidLocale" classname="org.troche.spring.application.exercise.model.GreetingMessageTest" time="0.0"/>
-  <testcase name="testConstructorValidParams" classname="org.troche.spring.application.exercise.model.GreetingMessageTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

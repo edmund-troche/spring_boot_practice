@@ -1,0 +1,165 @@
+{
+	"info": {
+		"name": "Spring Practice",
+		"_postman_id": "51a2b1fe-580c-a247-7e35-6221778aed1e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Text frequency",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\": \"For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered jennings perceive laughing six did far\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/v1/word_frequency",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"v1",
+						"word_frequency"
+					]
+				},
+				"description": "Call text analyzer, word frequency"
+			},
+			"response": []
+		},
+		{
+			"name": "Device Manager Create Device",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Door Sensor\", \"Description\": \"Light by the front door\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/v1/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"v1",
+						"devices"
+					]
+				},
+				"description": "Call text analyzer, word frequency"
+			},
+			"response": []
+		},
+		{
+			"name": "Device Manager Get Device",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Door Sensor\", \"Description\": \"Light by the front door\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/v1/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"v1",
+						"devices"
+					]
+				},
+				"description": "Call text analyzer, word frequency"
+			},
+			"response": []
+		},
+		{
+			"name": "Device Manager Get Devices",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Door Sensor\", \"Description\": \"Light by the front door\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/v1/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"v1",
+						"devices"
+					]
+				},
+				"description": "Call text analyzer, word frequency"
+			},
+			"response": []
+		},
+		{
+			"name": "Device Manager Delete Device",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Door Sensor\", \"Description\": \"Light by the front door\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/v1/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"v1",
+						"devices"
+					]
+				},
+				"description": "Call text analyzer, word frequency"
+			},
+			"response": []
+		}
+	]
+}
