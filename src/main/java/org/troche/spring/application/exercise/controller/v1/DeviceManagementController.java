@@ -31,9 +31,6 @@ public class DeviceManagementController extends BaseController {
 
     @Autowired
     public DeviceManagementController(final DeviceManagementService deviceManagementService) {
-        System.out.println("DeviceManagementController(), injecting device management service "
-            + deviceManagementService);
-
         this.deviceManagementService = Objects.requireNonNull(deviceManagementService,
 			 "deviceManagementService");
     }

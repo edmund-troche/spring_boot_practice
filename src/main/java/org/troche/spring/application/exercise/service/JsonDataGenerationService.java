@@ -43,8 +43,9 @@ public class JsonDataGenerationService {
             try {
                 receivedData = getDataFromUri(dataSourceUri);
             } catch (Exception exc) {
-                // Ignore, the URL is known to be a valid URI
-                System.out.println("Received exception: " + exc);
+                LOGGER.warn("Received exception: " + exc);
+
+                throw exc;
             }
 
             return receivedData;

@@ -387,6 +387,50 @@ curl http: //localhost:8888/api/v1/devices
 	}]
 ```
 
+### Call the "gateway" service endpoint
+
+The "gateway" service responds to an HTTP GET request on URL path `/api/v1/gateway`
+and returns JSON formatted data, in this case the data is actually data returned
+from invoking HTTP GET on `https://jsonplaceholder.typicode.com/posts`.
+
+To call the "gateway" endpoint:
+
+```bash
+curl http://localhost:8888/api/v1/gateway
+```
+
+returns:
+
+```bash
+[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+  },
+...
+  {
+    "userId": 10,
+    "id": 99,
+    "title": "temporibus sit alias delectus eligendi possimus magni",
+    "body": "quo deleniti praesentium dicta non quod\naut est molestias\nmolestias et officia quis nihil\nitaque dolorem quia"
+  },
+  {
+    "userId": 10,
+    "id": 100,
+    "title": "at nam consequatur ea labore ea harum",
+    "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
+  }
+]
+```
+
 ## Log Files
 
 Log files are located under `./logs`. All application logging is recorded in
