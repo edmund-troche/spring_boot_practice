@@ -3,6 +3,7 @@
 
 # Log file
 *.log
+logs
 
 # BlueJ files
 *.ctxt
@@ -36,3 +37,10 @@ gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
+
+# Editor Files
+*~
+*.swp
+
+# Eclipse
+.settings

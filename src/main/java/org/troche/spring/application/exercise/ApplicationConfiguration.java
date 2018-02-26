@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 import org.troche.spring.application.exercise.service.DeviceManagementService;
 import org.troche.spring.application.exercise.service.DeviceManagementServiceImpl;
+import org.troche.spring.application.exercise.service.JsonDataGenerationService;
 
 /**
  * Main Spring Boot configuration class for the exercise app.
@@ -17,5 +18,10 @@ public class ApplicationConfiguration {
     @Bean
     public DeviceManagementService deviceManagementService() {
             return new DeviceManagementServiceImpl();
+    }
+
+    @Bean
+    public JsonDataGenerationService jsonDataGenerationService() {
+            return new JsonDataGenerationService();
     }
 }

@@ -23,7 +23,7 @@
  starts.
  Hint: [HyperSQL](http://www.programmingforfuture.com/2011/02/in-process-mode-of-hsqldb-in-web.html)
 
-[ ] 1. Finally, create a REST endpoint that queries an external REST
+[x] 1. Finally, create a REST endpoint that queries an external REST
  service using Spring RestTemplate. The response should be returned to the
  caller. Use this external service: [typicode](https://jsonplaceholder.typicode.com/posts)
 
@@ -37,3 +37,6 @@
 - [X] README.md provides all the information necessary to build, run, and test
  your project from the command line.
 - [ ] OpenAPI spec
+- [ ] Add circuit breaker
+- [ ] Add session and request correlation ids
+
