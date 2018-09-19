@@ -4,9 +4,7 @@ import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * Main Spring Boot application class.
- */
+/** Main Spring Boot application class. */
 @SpringBootApplication
 public class Application {
     /**

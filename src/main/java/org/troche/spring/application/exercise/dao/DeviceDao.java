@@ -1,7 +1,6 @@
 package org.troche.spring.application.exercise.dao;
 
 import java.util.List;
-
 import org.troche.spring.application.exercise.model.Device;
 
 public interface DeviceDao {

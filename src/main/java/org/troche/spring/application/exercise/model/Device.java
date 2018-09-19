@@ -2,32 +2,27 @@ package org.troche.spring.application.exercise.model;
 
 import java.util.Date;
 import java.util.Objects;
-import java.util.Locale;
-import javax.annotation.Nullable;
 import javax.persistence.Entity;
-import javax.persistence.GenerationType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
- * Class to represent a device.
- */
+/** Class to represent a device. */
 @Entity
 public class Device {
-    /** 
+    /**
      * Device id, not null.
      *
-     * The device id is unique and generated.
+     * <p>The device id is unique and generated.
      */
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    /** 
-     * Device name, not null. 
+    /**
+     * Device name, not null.
      *
-     * The device name is a user specified label that is unique to
-     * the device.
+     * <p>The device name is a user specified label that is unique to the device.
      */
     private String name;
 
@@ -39,7 +34,7 @@ public class Device {
 
     public Device() {
         setName("some name");
-	setCreationDate(new Date());
+        setCreationDate(new Date());
     }
 
     /**
@@ -48,11 +43,11 @@ public class Device {
      * @param aName actual greeting message, not null.
      * @param aDescription device description, nullable.
      */
-    //public Device(final String aName, @Nullable final String aDescription) {
+    // public Device(final String aName, @Nullable final String aDescription) {
     public Device(final String aName, final String aDescription) {
         setName(aName);
         setDescription(aDescription);
-	setCreationDate(new Date());
+        setCreationDate(new Date());
     }
 
     /**
@@ -96,7 +91,7 @@ public class Device {
      *
      * @return device description, nullable.
      */
-    //@Nullable
+    // @Nullable
     public String getDescription() {
         return description;
     }
@@ -106,7 +101,7 @@ public class Device {
      *
      * @param aDescription device description, nullable.
      */
-    //public void setDescription(@Nullable final String aDescription) {
+    // public void setDescription(@Nullable final String aDescription) {
     public void setDescription(final String aDescription) {
         this.description = aDescription;
     }
@@ -126,12 +121,20 @@ public class Device {
      * @param aCreationDate device creation date, non null.
      */
     public void setCreationDate(final Date aCreationDate) {
-        this.creationDate = new Date(Objects.requireNonNull(aCreationDate, "creationDate").getTime());
+        this.creationDate =
+                new Date(Objects.requireNonNull(aCreationDate, "creationDate").getTime());
     }
 
     @Override
     public String toString() {
-        return "Device [id=" + id + ", name=" + name + ", description=" + description 
-		+ ", creationDate=" + creationDate + "]";
+        return "Device [id="
+                + id
+                + ", name="
+                + name
+                + ", description="
+                + description
+                + ", creationDate="
+                + creationDate
+                + "]";
     }
 }

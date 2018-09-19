@@ -1,11 +1,9 @@
 package org.troche.spring.application.exercise.model;
 
-import java.util.Objects;
 import java.util.Locale;
+import java.util.Objects;
 
-/**
- * Class to hold the greeting message and corresponding language.
- */
+/** Class to hold the greeting message and corresponding language. */
 public class GreetingMessage {
     /** Actual greeting message. */
     private final String content;
@@ -18,7 +16,6 @@ public class GreetingMessage {
      *
      * @param aContent actual greeting message
      * @param aLocale language used for the message
-     *
      */
     public GreetingMessage(final String aContent, final Locale aLocale) {
         this.content = Objects.requireNonNull(aContent, "content");
@@ -43,4 +40,3 @@ public class GreetingMessage {
         return locale;
     }
 }
-
